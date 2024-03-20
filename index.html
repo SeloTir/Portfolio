@@ -1,221 +1,382 @@
+
 <!DOCTYPE html>
-<html lang="en">    
-<link rel="stylesheet" href="style.css">
-<div class="wrapper">
-    <div class="intro">
-      <div class="profile">
-        <div class="photo">
-          <img src="https://i.imgur.com/zh9eNsh.jpg">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO - TIRYAKI Selahaddin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">TIRYAKI Selahaddin</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#veilletechnologique">Veille Technologique</a></li>
+          <li><a href="#projetsfuturs">Projets Futurs</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">TIRYAKI Selahaddin</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="bio">
-          <h1 class="name">Chih-Hsiang Chen</h1>
-          <p class="profession">Front-end Developer</p>
+        <div class="menu-links">
+          <li><a href="#parcours" onclick="toggleMenu()">Parcours</a></li>
+          <li><a href="#projets" onclick="toggleMenu()">Projets</a></li>
+          <li><a href="#veilletechnologique" onclick="toggleMenu()">Veille Technologique</a></li>
+          <li><a href="#projetsfuturs" onclick="toggleMenu()">Projets Futurs</a></li>
         </div>
       </div>
-      <div class="intro-section about">
-        <h1 class="title">about me</h1>
-        <p class="paragraph">
-          Hi everyone, I am a web front-end developer, graduated from NTHU, Taiwan and my major is CS. I recently try my
-          best to improve my skills on web front-end. My favorite thing is to observe others' portfolio.
-        </p>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
       </div>
-      <div class="intro-section contact">
-        <h1 class="title">Contact</h1>
-        <div class="info-section">
-          <i class="fas fa-phone"></i>
-          <span>(+886)888-888-888</span>
+      <div class="section__text">
+        <h1 class="title">TIRYAKI Selahaddin</h1>
+        <p class="section__text__p2">Etudiant en BTS SIO</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
-        <div class="info-section">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Kaoshiung, Taiwan</span>
-        </div>
-        <div class="info-section">
-          <i class="fas fa-paper-plane"></i>
-          <span>chih.hsi.chen@gmail.com</span>
-        </div>
-        <div class="info-section link">
-          <i class="fab fa-facebook"></i>
-          <a target="_blank" rel="author" href="https://www.facebook.com/profile.php?id=100006277752355">
-            <span>陳志祥</span>
-          </a>
-        </div>
-      </div>
-      <div class="intro-section follow">
-        <h1 class="title">Follow</h1>
-        <div class="info-section link">
-          <i class="fab fa-github"></i>
-          <a target="_blank" rel="author" href="https://github.com/chih-hsi-chen">
-            <span>chih-hsi-chen@github</span>
-          </a>
-        </div>
-        <div class="info-section link">
-          <i class="fab fa-codepen"></i>
-          <a target="_blank" rel="author" href="https://codepen.io/chih-hsi-chen">
-            <span>codepen.io</span>
-          </a>
-        </div>
-        <div class="info-section link">
-          <i class="fab fa-medium"></i>
-          <a target="_blank" rel="author" href="https://medium.com/狗奴工程師">
-            <span>狗奴工程師</span>
-          </a>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./pictures/githublogo.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/SeloTir'"
+          />
         </div>
       </div>
-    </div>
-    <div class="detail">
-      <div class="detail-section edu">
-        <div class="detail-title">
-          <div class="title-icon">
-            <i class="fas fa-user-graduate"></i>
+    </section>
+    <section id="projetsfuturs">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+            </div>
           </div>
-          <span>Eduation</span>
-        </div>
-        <div class="detail-content">
-          <div class="timeline-block">
-            <h1>Department of Computer Science</h1>
-            <p>National Tsing Hua University, Taiwan</p>
-            <time>2015 - 2019</time>
-          </div>
-          <div class="timeline-block">
-            <h1>Institute of Computer Science and Engineering</h1>
-            <p>National Chiao Tung University, Taiwan</p>
-            <time>2020 - present</time>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
           </div>
         </div>
       </div>
-      <div class="detail-section pg-skill">
-        <div class="detail-title">
-          <div class="title-icon">
-            <i class="fas fa-laptop-code"></i>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="parcours">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
           </div>
-          <span>Programming skills</span>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-        <div class="detail-content">
-          <ul class="pg-list">
-            <li>
-              <span>HTML5</span>
-              <div class="sb-skeleton">
-                <div class="skillbar" style="--pgbar-length: 90%"></div>
-              </div>
-            </li>
-            <li>
-              <span>CSS3</span>
-              <div class="sb-skeleton">
-                <div class="skillbar" style="--pgbar-length: 75%"></div>
-              </div>
-            </li>
-            <li>
-              <span>Javascript</span>
-              <div class="sb-skeleton">
-                <div class="skillbar" style="--pgbar-length: 70%"></div>
-              </div>
-            </li>
-            <li>
-              <span>JQuery</span>
-              <div class="sb-skeleton">
-                <div class="skillbar" style="--pgbar-length: 50%"></div>
-              </div>
-            </li>
-            <li>
-              <span>NodeJS</span>
-              <div class="sb-skeleton">
-                <div class="skillbar" style="--pgbar-length: 70%"></div>
-              </div>
-            </li>
-            <li>
-              <span>ReactJS</span>
-              <div class="sb-skeleton">
-                <div class="skillbar" style="--pgbar-length: 75%"></div>
-              </div>
-            </li>
-            <li>
-              <span>VueJS</span>
-              <div class="sb-skeleton">
-                <div class="skillbar" style="--pgbar-length: 40%"></div>
-              </div>
-            </li>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projets">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Mes Projets</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="veilletechnologique">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#veilletechnologique">Veille Technologique</a></li>
+            <li><a href="#projetsfuturs">Projets Futurs</a></li>
           </ul>
         </div>
-      </div>
-      <div class="detail-section tool-skill">
-        <div class="detail-title">
-          <div class="title-icon">
-            <i class="fas fa-tools"></i>
-          </div>
-          <span>Developement Tools</span>
-        </div>
-        <div class="detail-content">
-          <ul class="tool-list">
-            <li>
-              <svg viewbox="0 0 100 100">
-                <circle cx="50" cy="50" r="45"></circle>
-                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.6"></circle>
-              </svg>
-              <span class="tl-name">Photoshop</span>
-              <span class="tl-exp">60%</span>
-            </li>
-            <li>
-              <svg viewbox="0 0 100 100">
-                <circle cx="50" cy="50" r="45"></circle>
-                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.8"></circle>
-              </svg>
-              <span class="tl-name">Sublime</span>
-              <span class="tl-exp">80%</span>
-            </li>
-            <li>
-              <svg viewbox="0 0 100 100">
-                <circle cx="50" cy="50" r="45"></circle>
-                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.7"></circle>
-              </svg>
-              <span class="tl-name">Git</span>
-              <span class="tl-exp">70%</span>
-            </li>
-            <li>
-              <svg viewbox="0 0 100 100">
-                <circle cx="50" cy="50" r="45"></circle>
-                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.74"></circle>
-              </svg>
-              <span class="tl-name">NPM</span>
-              <span class="tl-exp">74%</span>
-            </li>
-          </ul>
-        </div>
-  
-      </div>
-      <div class="detail-section interests">
-        <div class="detail-title">
-          <div class="title-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-          <span>Interests</span>
-        </div>
-        <div class="detail-content">
-          <div class="outer-frame">
-            <ul class="favor-list">
-              <li>
-                <i class="fas fa-gamepad"></i>
-                <span>Game</span>
-              </li>
-              <li>
-                <i class="fas fa-paw"></i>
-                <span>Pet</span>
-              </li>
-              <li>
-                <i class="far fa-headphones-alt"></i>
-                <span>Music</span>
-              </li>
-              <li>
-                <i class="fas fa-book-spells"></i>
-                <span>Self-learning</span>
-              </li>
-              <li>
-                <i class="fas fa-user-edit"></i>
-                <span>Blog</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </html>
+      </nav>
+      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
