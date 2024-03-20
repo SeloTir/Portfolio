@@ -1,324 +1,221 @@
-
 <!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Portfolio - LE DOHER Loïc</title>
-    <meta name="keywords" content="Portfolio,Alternance,mooc,pontoise,BTS,BTS SIO,BTS SIO SISR,SIO,SISR,BTSSIO,loic,ledoher,le doher,doher,javascript,web design,web developement,cyber-sécurité,Réseau,Reseau,Sécurité,securite,informatique,Informatique,SecNumAcadémie,DRSD" />
-    <meta name="description" content="Portfolio - LE DOHER Loïc (BTS SIO SISR). Bienvenue sur mon PortFolio, vous pourrez y retrouver l'ensemble de mes compétences et réalisations professionnelles. "  />
-    <meta name="author" content="LE DOHER loïc." />
-    <link rel="icon" href="images/logo-web-component.webp">
-
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/Header.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/Acceuil.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/Footer.css" media="all">
-
-    <!-- Header icons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <!-- Footer -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- jquery -->
-    <script src="js/jquery-3.7.1.js"></script>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-</head>
-
-
-<body>
-
-
-    <div class="container">
-        <div class="navigation">
-            <div class="menu-toggle"></div>
-            <ul class="list">
-                <li class="list-item active" style="--color:#67B3E4"><a href="index.html">
-                        <span class="icon">
-                            <ion-icon name="home-outline"></ion-icon>
-                        </span>
-                        <span class="text">Home</span>
-                    </a></li>
-                <li class="list-item" style="--color:#f44336"><a href="entreprise.html">
-                        <span class="icon">
-                            <ion-icon name="briefcase-outline"></ion-icon>
-                        </span>
-                        <span class="text">Entreprise</span>
-                    </a></li>
-                <li class="list-item" style="--color:#ffa117"><a href="Réalisations_Pro.html">
-                        <span class="icon">
-                            <ion-icon name="layers-outline"></ion-icon>
-                        </span>
-                        <span class="text">Réalisations Professionnelles</span>
-                    </a></li>
-                <li class="list-item" style="--color:#2196f3"><a href="Veille_Technologique.php">
-                        <span class="icon">
-                            <ion-icon name="globe-outline"></ion-icon>
-                        </span>
-                        <span class="text">Veille Technologique</span>
-                    </a></li>
-                <li class="list-item" style="--color:#b145e9"><a href="Bilan.html">
-                        <span class="icon">
-                            <ion-icon name="accessibility-outline"></ion-icon>
-                        </span>
-                        <span class="text">Bilan</span>
-                    </a></li>
-            </ul>
+<html lang="en">    
+<link rel="stylesheet" href="style.css">
+<div class="wrapper">
+    <div class="intro">
+      <div class="profile">
+        <div class="photo">
+          <img src="https://i.imgur.com/zh9eNsh.jpg">
         </div>
+        <div class="bio">
+          <h1 class="name">Chih-Hsiang Chen</h1>
+          <p class="profession">Front-end Developer</p>
+        </div>
+      </div>
+      <div class="intro-section about">
+        <h1 class="title">about me</h1>
+        <p class="paragraph">
+          Hi everyone, I am a web front-end developer, graduated from NTHU, Taiwan and my major is CS. I recently try my
+          best to improve my skills on web front-end. My favorite thing is to observe others' portfolio.
+        </p>
+      </div>
+      <div class="intro-section contact">
+        <h1 class="title">Contact</h1>
+        <div class="info-section">
+          <i class="fas fa-phone"></i>
+          <span>(+886)888-888-888</span>
+        </div>
+        <div class="info-section">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Kaoshiung, Taiwan</span>
+        </div>
+        <div class="info-section">
+          <i class="fas fa-paper-plane"></i>
+          <span>chih.hsi.chen@gmail.com</span>
+        </div>
+        <div class="info-section link">
+          <i class="fab fa-facebook"></i>
+          <a target="_blank" rel="author" href="https://www.facebook.com/profile.php?id=100006277752355">
+            <span>陳志祥</span>
+          </a>
+        </div>
+      </div>
+      <div class="intro-section follow">
+        <h1 class="title">Follow</h1>
+        <div class="info-section link">
+          <i class="fab fa-github"></i>
+          <a target="_blank" rel="author" href="https://github.com/chih-hsi-chen">
+            <span>chih-hsi-chen@github</span>
+          </a>
+        </div>
+        <div class="info-section link">
+          <i class="fab fa-codepen"></i>
+          <a target="_blank" rel="author" href="https://codepen.io/chih-hsi-chen">
+            <span>codepen.io</span>
+          </a>
+        </div>
+        <div class="info-section link">
+          <i class="fab fa-medium"></i>
+          <a target="_blank" rel="author" href="https://medium.com/狗奴工程師">
+            <span>狗奴工程師</span>
+          </a>
+        </div>
+      </div>
     </div>
-
-
-    <!-- Présentation -->
-    <section class="Presentation">
-        <section class="Titre">
-            <h1 class="Titre1"> Bonjour <br></h1>
-            <hr class="HRnormal">
-            <h1 class="Titre2"> Je m'appelle Loïc LE DOHER <br></h1>
-            <h1 class="Titre3"> Etudiant en Licence informatique CNAM</h1>
-        </section>
-        <section class="IMG_Etudiant">
-            <img src="images/Acceuil/Hand-coding-bro.png" alt="IMG_Etudiant_Informatique" width="400px">
-        </section>
-    </section>
-    <!-- Présentation -->
-
-    <!-- Arrow down -->
-    <a href="#TitrePresentation">
-        <div class='scrolldown'>
-            <div class="chevrons">
-                <div class='chevrondown'></div>
-                <div class='chevrondown'></div>
-            </div>
+    <div class="detail">
+      <div class="detail-section edu">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <span>Eduation</span>
         </div>
-    </a>
-    <!-- Arrow down -->
-
-    <section class="Presentation2">
-        <section class="IMG_Etudiant">
-            <img src="images/Acceuil/Website-Creator-bro.png" alt="IMG_Etudiant_Projet" width="400px" id="IMG_Etudiant">
-        </section>
-        <section class="Description">
-            <section class="TitrePresentation">
-                <h1 class="TitrePresentation" id="TitrePresentation">Présentation</h1>
-            </section>
-            <section class="TitrePresentation">
-                <hr>
-            </section>
-            <section class="TitrePresentation">
-                <p>
-                    Passionné par l’informatique et attiré par les réseaux,<br>
-                    j'ai, dans un premier temps, choisi le BTS SIO SISR en alternance <br> pour allier théorie et pratique. À l’issue de ce BTS, <br>
-                    j'ai commencé une <strong> Licence Informatique Générale CNAM </strong> toujours en alternance. <br>
-                    Je souhaite poursuivre ma formation vers un Master en <strong> cybersécurité. </strong><br>
-                    <a href="documents/LE DOHER Loïc - CV PortFolio.pdf" target="_blank" rel="noreferrer" id="CV">
-                        <button class="boutons">Mon CV</button>
-                    </a>
-                </p>
-            </section>
-        </section>
-    </section>
-
-    <!-- Certifications -->
-    <section>
-        <section>
-            <section class="TitrePresentation" id="Certifications">
-                <h1 class="TitrePresentation">Certifications</h1>
-            </section>
-            <section class="TitrePresentation">
-                <hr>
-            </section>
-        </section>
-
-        <section class="Certifications">
-            <div class="certification">
-                <div class="certification_image">
-                    <img src="images/Acceuil/SecNumAcadémie.png" alt="Logo Anssi SecNumAcadémie" width="100">
-                </div>
-                <div class="certification_description">
-                    <p class="certification_titre">SecNum<wbr>Académie</p>
-                    <p>C'est un MOOC qui initie à la Cybersécurité. (Pendant le BTS SIO SISR)</p>
-                    <a href="documents/Attestation-SecNumAcadémie.pdf" target="_blank" rel="noreferrer">
-                        <button class="certification_bouton">
-                            <ion-icon class="icon" name="document-attach-outline"></ion-icon>
-                            &nbsp;Voir l'attestation</button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="certification">
-                <div class="certification_image">
-                    <img src="images/Acceuil/Logo_DRSD.webp" alt="Logo Anssi DRSD" width="100">
-                </div>
-                <div class="certification_description">
-                    <p class="certification_titre">DRSD Secret Defense</p>
-                    <p>C'est un MOOC qui initie à la sécurité des données et des intérêts nationaux. (Pendant le BTS SIO SISR)</p>
-                    <a href="documents/DRSD_Secret_Defense-LE_DOHER_Loïc.pdf" target="_blank" rel="noreferrer">
-                        <button class="certification_bouton">
-                            <ion-icon class="icon" name="document-attach-outline"></ion-icon>
-                            &nbsp;Voir l'attestation</button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="certification">
-                <div class="certification_image">
-                    <img src="images/Acceuil/CNIL_logo.png" alt="Logo CNIL" width="100">
-                </div>
-                <div class="certification_description">
-                    <p class="certification_titre">CNIL : Mooc sur la RGPD</p>
-                    <p>Le MOOC permet de sensibiliser à la protection des données. (Pendant le BTS SIO SISR)</p>
-                    <a href="documents/RGPD.pdf" target="_blank" rel="noreferrer">
-                        <button class="certification_bouton">
-                            <ion-icon class="icon" name="document-attach-outline"></ion-icon>
-                            &nbsp;Voir l'attestation</button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="certification">
-                <div class="certification_image">
-                    <img src="images/Acceuil/pix.png" alt="Logo Pix" width="100">
-                </div>
-                <div class="certification_description">
-                    <p class="certification_titre">PIX</p>
-                    <p>Pix est le service public en ligne pour évaluer ses compétences numériques.(Pendant le Lycée)
-                    </p>
-                    <a href="documents/Résultat_Parcours_Pix.pdf" target="_blank" rel="noreferrer">
-                        <button class="certification_bouton">
-                            <ion-icon class="icon" name="document-attach-outline"></ion-icon>
-                            &nbsp;Voir l'attestation</button>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </section>
-    <!-- Certifications -->
-
-    <!-- frise_chronologique -->
-    <section class="frise_chronologique">
-        <br>
-        <section>
-            <section class="TitrePresentation">
-                <h1>Mon Parcours Scolaire</h1>
-            </section>
-            <section class="TitrePresentation">
-                <hr>
-            </section>
-        </section>
-        <br>
-        <ul class="frise">
-            <li class="carte" style="--accent-color:#1B5F8C">
-                <div class="date">Objectif</div>
-                <div class="title">Master en alternance, <br> ESIEE-IT à Pontoise. </div>
-                <div class="descr">
-                    Ingénieur en <strong> Cybersécurité </strong>
-                </div>
-            </li>
-            <li class="carte" style="--accent-color:#F380FF">
-                <div class="date">2023-2024</div>
-                <div class="title">Licence informatique générale CNAM en alternance, <br> ESIEE-IT à Pontoise. </div>
-                <div class="descr">
-                    + Bachelor informatique option Cybersécurité (Double formation)<br>
-                    <strong>Alternance chez Thales</strong>
-                </div>
-            </li>
-            <li class="carte" style="--accent-color:#E24A68">
-                <div class="date">2021 – 2023</div>
-                <div class="title">BTS SIO SISR en alternance, <br> ESIEE-IT à Pontoise. </div>
-                <div class="descr">
-                    BTS Services Informatiques aux Organisations option Solutions d'Infrastructure, Systèmes et
-                    Réseaux.
-                    <br>
-                    <strong>Alternance au Ministère des Armées</strong>
-                </div>
-            </li>
-            <li class="carte" style="--accent-color:#FBCA3E">
-                <div class="date">2021</div>
-                <div class="title">Baccalauréat : Options mathématiques, numérique et sciences informatiques.</div>
-                <div class="descr">
-                    Lycée Camille Pissarro à Pontoise <br>Mention Assez Bien <br>
-                    <a href="http://www.lyc-pissarro-pontoise.ac-versailles.fr/" target="_blank" rel="noreferrer">
-                        <button id="site2"> Site web du lycée </button>
-                    </a>
-                </div>
-            </li>
-            <li class="carte" style="--accent-color:#41516C">
-                <div class="date">2018</div>
-                <div class="title">Concours National de la Résistance et de la
-                    Déportation (CNRD)</div>
-                <div class="descr">
-                    Participation volontaire, Niveau 3ème, Classé 49 ème sur 400 participants
-                </div>
-            </li>
-            <li class="carte" style="--accent-color:#4CADAD">
-                <div class="date">2018</div>
-                <div class="title">Brevet des collèges</div>
-                <div class="descr">
-                    Collège Jean Claude Chabanne à Pontoise <br>Mention Assez Bien <br>
-                    <a href="http://www.clg-chabanne-pontoise.ac-versailles.fr/" target="_blank" rel="noreferrer">
-                        <button id="site1"> Site web du collège </button>
-                    </a>
-
-                </div>
-            </li>
-        </ul>
-    </section>
-    <br><br>
-
-    <!-- Scroll Up -->
-    <script src="js/Scroll_Up.js"></script>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="inner">
-            <div class="column is-logo">
-                <div class="logo">
-                    <img src="images/logo-web-component-white.webp" alt="logo" width="50px">
-                </div>
-                <div class="logo-info">
-                    <div class="footer_text">LE DOHER Loïc</div>
-                    <span class="copyright">© 2022. All rights reserved.</span>
-                </div>
-            </div>
-            <div class="column is-nav">
-                <div class="column-title">Navigation</div>
-                <ul>
-                    <li><a href="index.html" class="footer_a">Accueil</a></li>
-                    <li><a href="entreprise.html" class="footer_a">Mon entreprise</a></li>
-                    <li><a href="Veille_Technologique.php" class="footer_a">Ma veille</a></li>
-                </ul>
-            </div>
-            <div class="column is-nav">
-                <div class="column-title">Contact</div>
-                <ul>
-                    <li><a href="mailto:loic.ledoher@gmail.com" class="footer_a"><i class="fa fa-envelope-open"></i>
-                            loic.ledoher@gmail.com</a></li>
-                    <li><a href="https://github.com/Lauyque" target="_blank" rel="noreferrer" class="footer_a"><i class="fa fa-github"></i> Lauyque</a></li>
-                    <li><a href="https://www.linkedin.com/in/loic-le-doher/" target="_blank" rel="noreferrer" class="footer_a"><i
-                                class="fa fa-linkedin"></i> Linkedin</a></li>
-                </ul>
-            </div>
-            <div class="column is-nav">
-                <div class="column-title">Informations</div>
-                <ul>
-                    <li><a href="Mentions_Legales.html" class="footer_a">Mentions Légales</a></li>
-                    <li><a href="#" class="footer_a">Conditions d'utilisation</a></li>
-                </ul>
-            </div>
+        <div class="detail-content">
+          <div class="timeline-block">
+            <h1>Department of Computer Science</h1>
+            <p>National Tsing Hua University, Taiwan</p>
+            <time>2015 - 2019</time>
+          </div>
+          <div class="timeline-block">
+            <h1>Institute of Computer Science and Engineering</h1>
+            <p>National Chiao Tung University, Taiwan</p>
+            <time>2020 - present</time>
+          </div>
         </div>
-    </footer>
-
-
-    <!-- Custom JS File -->
-    <script src="js/Header.js"></script>
-    <script src="js/MessageRetour.js"></script>
-
-</body>
-
-</html>
+      </div>
+      <div class="detail-section pg-skill">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <span>Programming skills</span>
+        </div>
+        <div class="detail-content">
+          <ul class="pg-list">
+            <li>
+              <span>HTML5</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 90%"></div>
+              </div>
+            </li>
+            <li>
+              <span>CSS3</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 75%"></div>
+              </div>
+            </li>
+            <li>
+              <span>Javascript</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 70%"></div>
+              </div>
+            </li>
+            <li>
+              <span>JQuery</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 50%"></div>
+              </div>
+            </li>
+            <li>
+              <span>NodeJS</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 70%"></div>
+              </div>
+            </li>
+            <li>
+              <span>ReactJS</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 75%"></div>
+              </div>
+            </li>
+            <li>
+              <span>VueJS</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 40%"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="detail-section tool-skill">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <span>Developement Tools</span>
+        </div>
+        <div class="detail-content">
+          <ul class="tool-list">
+            <li>
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.6"></circle>
+              </svg>
+              <span class="tl-name">Photoshop</span>
+              <span class="tl-exp">60%</span>
+            </li>
+            <li>
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.8"></circle>
+              </svg>
+              <span class="tl-name">Sublime</span>
+              <span class="tl-exp">80%</span>
+            </li>
+            <li>
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.7"></circle>
+              </svg>
+              <span class="tl-name">Git</span>
+              <span class="tl-exp">70%</span>
+            </li>
+            <li>
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.74"></circle>
+              </svg>
+              <span class="tl-name">NPM</span>
+              <span class="tl-exp">74%</span>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+      <div class="detail-section interests">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <span>Interests</span>
+        </div>
+        <div class="detail-content">
+          <div class="outer-frame">
+            <ul class="favor-list">
+              <li>
+                <i class="fas fa-gamepad"></i>
+                <span>Game</span>
+              </li>
+              <li>
+                <i class="fas fa-paw"></i>
+                <span>Pet</span>
+              </li>
+              <li>
+                <i class="far fa-headphones-alt"></i>
+                <span>Music</span>
+              </li>
+              <li>
+                <i class="fas fa-book-spells"></i>
+                <span>Self-learning</span>
+              </li>
+              <li>
+                <i class="fas fa-user-edit"></i>
+                <span>Blog</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </html>
