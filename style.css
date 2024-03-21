@@ -177,6 +177,7 @@ section {
   margin: auto 0;
 }
 
+
 .section__text {
   align-self: center;
   text-align: center;
@@ -191,6 +192,7 @@ section {
 }
 
 .section__text__p2 {
+  text-align: center;
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
@@ -431,3 +433,20 @@ footer {
 footer p {
   text-align: center;
 }
+
+body {
+  background-image: url('items/background.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
