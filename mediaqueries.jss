@@ -7,10 +7,6 @@
   .about-containers {
     flex-wrap: wrap;
   }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
 }
 
 @media screen and (max-width: 1200px) {

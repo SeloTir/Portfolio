@@ -297,6 +297,8 @@ section {
 }
 
 .details-container {
+  max-height 400px;
+  overflow: auto;
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -304,7 +306,24 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+
 }
+
+
+.rubriques-conteneur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .details-container {
+    max-height: none; 
+    overflow: visible; 
+  }
+}
+
 
 .section-container {
   gap: 4rem;
@@ -449,4 +468,5 @@ body {
     transform: rotate(360deg);
   }
 }
+
 
