@@ -1,30 +1,198 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO - TIRYAKI Selahaddin</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<!--#CSS-->
+<style>
+body {
+    background-image: url('items/pageaccueil.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-decoration-color: rgb(0, 0, 0);
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(0, 0, 0);
+}
+
+.btn-color-1 {
+  background-color: rgb(0, 0, 0); /* Remplacez par la couleur souhaitée */
+  border: rgb(255, 255, 255) 0.1rem solid;
+  margin-top: 180px;
+  position: absolute; /* Position absolue */
+  top: 55%; /* Alignement vertical au milieu */
+  left: 50%; /* Alignement horizontal au milieu */
+
+
+}
+.btn-color-2 {
+  background-color: rgb(0, 0, 0); /* Remplacez par la couleur souhaitée */
+  border: rgb(255, 255, 255) 0.1rem solid;
+  margin-top: 180px;
+  position: absolute; /* Position absolue */
+  top: 55%; /* Alignement vertical au milieu */
+  left: 65%; /* Alignement horizontal au milieu */
+  
+}
+
+.btn-color-1:hover{
+  cursor: pointer;
+  color: rgb(150, 150, 150);
+}
+
+
+.btn-color-2:hover{
+  cursor: pointer;
+  color: rgb(150, 150, 150);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Couleur des paragraphes */
+p {
+  color: rgb(253, 253, 253);
+}
+
+p2 {
+  color: rgb(253, 253, 253);
+  position: inherit absolute;
+  
+}
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.logo {
+  font-size: 2rem;
+  color : red;
+  width: 11%; /* Largeur de votre choix */
+}
+
+.gif-container {
+  width: 1000px; /* Largeur du conteneur */
+  height: 600px; /* Hauteur du conteneur */
+  overflow: hidden; /* Pour cacher les parties du GIF qui dépassent du conteneur */
+  position: absolute; /* Position absolue */
+  top: 45%; /* Alignement vertical au milieu */
+  left: 60%; /* Alignement horizontal au milieu */
+  transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+}
+
+.gif-container img {
+  width: 100%; /* Pour remplir entièrement le conteneur */
+  height: auto; /* Pour conserver le ratio d'aspect du GIF */
+}
+
+
+.gif-container2 {
+  width: 10%; /* Largeur du conteneur */
+  height: 55%; /* Hauteur du conteneur */
+  overflow: hidden; /* Pour cacher les parties du GIF qui dépassent du conteneur */
+  position: absolute; /* Position absolue */
+  top: 95%; /* Alignement vertical au milieu */
+  left: 60%; /* Alignement horizontal au milieu */
+  transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+}
+
+.gif-container2 img {
+  width: 100%; /* Pour remplir entièrement le conteneur */
+  height: auto; /* Pour conserver le ratio d'aspect du GIF */
+}
+
+
+.text-bas-page {
+  color:white;
+  position: absolute;
+  bottom: 40%;
+  left: 6%;
+  font-size: 40px; /* Taille du texte pour .text-bas-page */
+  text-decoration: underline;
+}
+
+.text-bas-page2 {
+  position: absolute;
+  bottom: 37%;
+  left: 9%;
+  font-size: 25px; /* Taille du texte pour .text-bas-page2 */
+}
+
+
+.profile-image {
+  width: 330px; /* Largeur de votre choix */
+  height: auto; /* Hauteur auto pour maintenir les proportions */
+  border-radius: 50%; /* Pour un effet de cercle */
+  position: absolute; /* Position absolue */
+  bottom: 45%;
+  left: 7%; /* Positionnement à gauche */
+  /* Vous pouvez ajuster la valeur de left selon vos besoins */
+  /* Ajoutez d'autres styles de positionnement ici si nécessaire */
+}
+
+</style>
+<!-- END #CSS-->
+
+
+  <!-- === Début de la Page d'accueil === -->
+<body>
+
     <nav id="desktop-nav">
       <div class="logo">Portfolio</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#parcours">Parcours</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#veilletechnologique">Veille Technologique</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#projetsfuturs">Projets Futurs</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="veilletechno.html">Veille Technologique</a></li>
+          <li><a href="certif.html">Certifications</a></li>
+          <li><a href="projetsfuturs.html">Projets Futurs</a></li>
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">TIRYAKI Selahaddin</div>
+      <div class="texte-bas-page">TIRYAKI Selahaddin</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -32,11 +200,11 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#parcours" onclick="toggleMenu()">Parcours</a></li>
-          <li><a href="#projets" onclick="toggleMenu()">Projets</a></li>
-          <li><a href="#veilletechnologique" onclick="toggleMenu()">Veille Technologique</a></li>
-          <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
-          <li><a href="#projetsfuturs" onclick="toggleMenu()">Projets Futurs</a></li>
+          <li><a href="parcours.html" onclick="toggleMenu()">Parcours</a></li>
+          <li><a href="projets.html" onclick="toggleMenu()">Projets</a></li>
+          <li><a href="veilletechno.html" onclick="toggleMenu()">Veille Technologique</a></li>
+          <li><a href="certif.html" onclick="toggleMenu()">Certifications</a></li>
+          <li><a href="projetsfuturs.html" onclick="toggleMenu()">Projets Futurs</a></li>
         </div>
       </div>
     </nav>
@@ -44,655 +212,30 @@
       <div class="section__pic-container">
         <img src="./items/imageprofile.jpg" alt="My Profile" class="profile-image" />
       </div>
+      <div class="gif-container">
+        <img src="./items/ob_e1987e_hacker-animation.gif" alt="GIF">
+      </div>
       <div class="section__text">
-        <h1 class="title">TIRYAKI Selahaddin</h1>
-        <p class="section__text__p2">Etudiant en BTS SIO</p>
+        <h1 class="text-bas-page">TIRYAKI Selahaddin</h1>
+        <p class="text-bas-page2">Etudiant en BTS SIO</p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./items/CV-TIR.pdf')">CV</button>
           <button class="btn btn-color-1" onclick="window.open('./items/TestTableau.png')">Tableau de compétences</button>
+          <button class="btn btn-color-2" onclick="window.open('./items/CV-TIR.pdf')">CV</button>
         </div>
         <div id="socials-container">
           <img src="./items/linkedinlogo.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/selahaddin-tiryaki/'" />
+          <div class="gif-container2">
+            <img src="./items/gifaccueil.gif" alt="GIF">
+          </div>
           <img src="./items/githublogo.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/SeloTir'" />
         </div>
       </div>
     </section>
-    
-    <style>
-      .profile-image {
-        width: 330px; /* Largeur de votre choix */
-        height: auto; /* Hauteur auto pour maintenir les proportions */
-        border-radius: 50%; /* Pour un effet de cercle */
-        /* Ajoutez d'autres styles de positionnement ici si nécessaire */
-      }
-      .section__pic-container {
-        text-align: center; /* Pour centrer l'image horizontalement */
-      }
-    </style>
-  
-    <br><br><br><br>
-
-
-    <! -- SECTION PARCOURS -->
-
-    <! -- FORMATIONS -->
-    <section id="parcours">
-        <p class="section__text__p1">FORMATIONS</p>
-      <h1 class="title">Mes différentes formations</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./items/educationlogo.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Formation</h3>
-              <img src="./items/Lyceecondorcet.png" alt="My School" />
-              <p>2019 - 2022 <br />Baccalauréat - Sciences et technologies de l'industrie et du développement durable (STI2D)</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./items/educationlogo.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Formation</h3>
-              <img src="./items/LyceeLouisArmand.png" alt="My School" />
-              <p>2022 - 2024<br />BTS SIO - Services informatiques aux organisations Option (SISR) Solutions d’infrastructure, systèmes et réseaux </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-            J'ai obtenu un baccalauréat en sciences et technologies de l'industrie et du développement durable (STI2D) au lycée Condorcet à Montreuil. 
-            J'ai étudié les bases de la programmation et de la conception de systèmes informatiques. 
-            Et par la suite j'ai suivi un BTS en Services Informatiques aux Organisations (SIO) au lycée Louis Armand à Nogent-sur-Marne ou 
-            j'ai acquis des connaissances approfondies en réseau, en cybersécurité et en gestion de projets informatiques.
-
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-
-      <! -- STAGES -->
-      
-     <p class="section__text__p1">STAGES</p>
-     <h1 class="title">Mes différents stages</h1>
-     <br><br><br><br><br><br>
-     <div class="section-container">
-       <div class="section__pic-container">
-       </div>
-       <div class="about-details-container">
-         <div class="about-containers">
-           <div class="details-container">
-             <img
-               src="./items/internshiplogo2.png"
-               alt="Stage icon"
-               class="icon"
-             />
-             <h3>Stage</h3>
-             <img src="./items/Lyceecondorcet.png" alt="My Internship" />
-             <p>2022 - 2023 <br />STAGE BTS (Réseau) (5 Semaines) - Lycée Condorcet, 93100 Montreuil​</p>
-           </div>
-           <div class="details-container">
-            <img
-              src="./items/internshiplogo2.png"
-              alt="Stage icon"
-              class="icon"
-            />
-            <h3>Stage</h3>
-            <img src="./items/trimbleloca.jpg" alt="My Internship" style="width: 375px; height: auto;" /> <!-- Modifiez les valeurs de largeur et de hauteur selon vos besoins -->
-            <p>2023 - 2024<br />STAGE BTS (Réseau) (5 Semaines) - Trimble France, 94340 Joinville-le-pont</p>
-          </div>
-          
-         </div>
-         <div class="text-container">
-           <p>
-            Pendant mon stage BTS (Réseau) au Lycée Condorcet à Montreuil, j'ai été exposé à une gamme diversifiée de tâches et de responsabilités liées à l'administration système et à la gestion du parc informatique.
-            Tout d'abord, j'ai eu l'occasion de mettre en place un serveur FOG, ce qui m'a permis de comprendre les tenants et les aboutissants de la gestion des images système et du déploiement dans un environnement éducatif.
-            Ensuite, j'ai joué un rôle crucial dans le nettoyage et le formatage des disques et PC, ainsi que leur réintégration dans le bon domaine. Cette expérience m'a permis de comprendre l'importance de la maintenance préventive pour garantir le bon fonctionnement des équipements informatiques.
-            De plus, j'ai été chargé de déployer des images sur les nouveaux ordinateurs, ce qui m'a permis de gagner en expérience pratique dans le processus de déploiement d'images système dans un contexte scolaire.
-            J'ai également contribué au câble management des salles informatiques, ce qui m'a sensibilisé à l'importance de l'organisation physique pour assurer la fiabilité et la facilité de maintenance des infrastructures informatiques.
-            Enfin, j'ai effectué des interventions dans différentes salles de l'établissement pour résoudre divers problèmes informatiques, ce qui m'a permis de développer mes compétences en dépannage et en résolution de problèmes en temps réel.
-            En revanche, chez Trimble France à Joinville-le-Pont, j'ai été impliqué dans des projets plus axés sur le développement logiciel et l'infrastructure informatique.
-            J'ai d'abord créé un script Python capable de copier des fichiers sur Google Drive en utilisant l'API Google, ce qui m'a permis de développer mes compétences en développement Python et en intégration d'API.
-            Ensuite, j'ai travaillé sur la création d'un container Docker capable d'exécuter ce script, ce qui m'a donné une compréhension pratique du fonctionnement et de l'utilisation des conteneurs Docker pour faciliter le déploiement d'applications.
-            Parallèlement, j'ai également eu l'opportunité de me familiariser avec la gestion d'images Docker et la création d'un container avec BuildTools 2022, ce qui m'a permis d'approfondir mes connaissances en matière de conteneurisation et de création d'environnements de développement isolés.
-            En conclusion, ces deux expériences de stage m'ont offert une occasion précieuse de développer mes compétences dans des domaines complémentaires, allant de l'administration système et de la gestion du parc informatique à la développement logiciel et à l'infrastructure informatique.
-           </p>
-         </div>
-       </div>
-     </div>
-     <img
-       src="./assets/arrow.png"
-       alt="Arrow icon"
-       class="icon arrow"
-       onclick="location.href='./#experience'"
-     />
-    </section>
-
-
-    <! -- SECTION PROJETS -->
-
-    <! -- MES DIFFERENTS PROJETS EN FORMATION 1ERE ANNEE -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-     <section id="projets">
-        <p class="section__text__p1">Mes Projets</p>
-        <h1 class="title">Mes différents projets en formation de 1ere année de BTS</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./items/imageweb.avif"
-                  alt="Projet 1"
-                  class="project-img"
-                />
-              </div>
-              <h1 class="experience-sub-title project-title">Développement d'un site web</h1>
-              <h3 class="experience-details-container">Développer le site internet "SanayaBio" en langage de programmation "HTML" et "CSS"</h3>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./items/serveurglpi.png"
-                  alt="Projet 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Serveur GLPI</h2>
-              <h3 class="experience-details-container">Serveur Permettant la Gestion et l'inventaire du parc informatique</h3>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Projet 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-
-        <! -- MES DIFFERENTS PROJETS EN FORMATION 2EME ANNEE -->
-        <h1 class="title">Mes différents projets en formation de 2eme année de BTS</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./items/Imageguacamole.jpg"
-                  alt="Projet 1"
-                  class="project-img"/>
-              </div>
-              <h2 class="experience-sub-title project-title">Bastion Guacamole</h2>
-              <h3 class="experience-details-container">Serveur d'administration (proxy) qui permet d'accéder à distance aux serveurs et aux applications via son interface Web</h3>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='./items/BASTION_GUACAMOLE.pdf'"
-                  >
-                  Notion
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./items/serveurzabbix.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h1 class="experience-sub-title project-title">Serveur Zabbix</h1>
-              <h3 class="experience-details-container">Serveur de centralisation permettant de surveiller le parc informatique à distance</h3>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./items/STORMSHIELD.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Stormshield</h2>
-              <h3 class="experience-details-container">Pare-feu (firewall) c'est un système de sécurité de réseau informatique qui limite le trafic Internet entrant, sortant ou à l'intérieur d'un réseau privé</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-
-        <! -- MES DIFFERENTS PROJETS EN STAGE 1ERE ANNEE -->
-        <h1 class="title">Mes différents projets en stage de 1ere année de BTS</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./items/foglogo.png"
-                  alt="Projet 1"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Mastering PC</h2>
-              <h3 class="experience-details-container"></h3>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./items/certificat_ridf.png"
-                  alt="Projet 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Deuxieme Projet</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-
-        <! -- MES DIFFERENTS PROJETS EN STAGE 2EME ANNEE -->
-        <h1 class="title">Mes différents projets en stage de 2eme année de BTS</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-1.png"
-                  alt="Project 1"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project One</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Two</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-      </section>
-      
-
-      <! -- SECTION VEILLE TECHNOLOGIQUE -->
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <section id="veilletechnologique">
-        <h1 class="title">Veille Technologique</h1>
-          <div class="experience-details-container">
-            <div class="about-containers">
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/project-1.png"
-                    alt="Project 1"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">Premier Projet</h2>
-                <div class="btn-container"> 
-                </div>
-              </div>
-
-
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/project-2.png"
-                    alt="Project 2"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">Project Two</h2>
-                <div class="btn-container">
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/project-3.png"
-                    alt="Project 3"
-                    class="project-img"
-                  />
-                </div>
-
-                <h2 class="experience-sub-title project-title">Project Three</h2>
-                <div class="btn-container">
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-
-
-
-    
-    <! -- SECTION CERTIFICATIONS-->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <section id="certifications">
-        <p class="section__text__p1">CERTIFICATIONS</p>
-      <h1 class="title">Mes différentes certifications</h1>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./items/certificationicon.jpg"
-                alt="Certification icon"
-                class="icon"/>
-                <section id="certifications">
-              <h3>PIX</h3>
-              <img src="./items/Pix-2022.png" alt="Certification" />
-              <p>2022 - Certification PIX</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./items/certificationicon.jpg"
-                alt="Certification icon"
-                class="icon"
-              />
-              <h3>PIX</h3>
-              <img src="./items/Pix-2024.png" alt="Certification" />
-              <p>2024 - Certification PIX</p>
-            </div>
-          </div>
-          <br><br><br><br><br><br>
-          <div class="details-container">
-            <img
-              src="./items/certificationicon.jpg"
-              alt="Certification icon"
-              class="icon"
-            />
-            <h3>CSNA - StormShield</h3>
-            <img src="./items/workinprogresslogo.jpg" alt="Certification" />
-            <p>2024 - Certification StormShield CSNA</p>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <! -- SECTION PROJETS FUTURS -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
-    <section id="projetsfuturs">
-      <h1 class="title">PROJETS FUTURS</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"/>
-      </nav>
-      <p>Copyright &#169; 2024 TIRYAKI Selahaddin. All Rights Reserved.</p>
+    <footer>
+      <br><br><br><br><br><br><br><br><br><br>
+      <p2>Copyright &#169; 2024 TIRYAKI Selahaddin. All Rights Reserved.</p2>
     </footer>
-    <script src="script.js"></script>
+
   </body>
 </html>
-</section>
+  <!-- === Fin de la Page d'accueil === -->
