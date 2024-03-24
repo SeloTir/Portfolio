@@ -5,68 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO - TIRYAKI Selahaddin</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
 <!--#CSS-->
 <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left; /* Optional: center the text */
+}
+
 body {
-    background-image: url('items/pageaccueil.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  background-image: url('items/pageaccueil.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  text-decoration-color: rgb(0, 0, 0);
-}
-
-a:hover {
-  color: rgb(0, 0, 0);
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(0, 0, 0);
-}
-
-.btn-color-1 {
-  background-color: rgb(0, 0, 0); /* Remplacez par la couleur souhaitée */
-  border: rgb(255, 255, 255) 0.1rem solid;
-  margin-top: 180px;
-  position: absolute; /* Position absolue */
-  top: 55%; /* Alignement vertical au milieu */
-  left: 50%; /* Alignement horizontal au milieu */
-
-
-}
-.btn-color-2 {
-  background-color: rgb(0, 0, 0); /* Remplacez par la couleur souhaitée */
-  border: rgb(255, 255, 255) 0.1rem solid;
-  margin-top: 180px;
-  position: absolute; /* Position absolue */
-  top: 55%; /* Alignement vertical au milieu */
-  left: 65%; /* Alignement horizontal au milieu */
-  
-}
-
-.btn-color-1:hover{
-  cursor: pointer;
-  color: rgb(150, 150, 150);
-}
-
-
-.btn-color-2:hover{
-  cursor: pointer;
-  color: rgb(150, 150, 150);
-}
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Couleur des paragraphes */
+
+/* Rubriques: Parcours/Projets/etc...*/
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-decoration-color: rgb(124, 124, 124);
+}
+
+a:hover {
+  color: rgb(124, 124, 124);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(124, 124, 124);
+}
+
+/* Tableaux de compétences et CV pour btn */
+.btn-color-1 {
+  background-color: rgb(150, 150, 150);
+  border: rgb(126, 126, 126) 0.1rem solid;
+  margin-top: 180px;
+  position: absolute;
+  top: 55%; /* Ajusté pour centrer verticalement */
+  left: 50%; /* Ajusté pour centrer horizontalement */
+  transform: translate(-50%, -50%); /* Correction pour centrer complètement */
+}
+
+.btn-color-2 {
+  background-color: rgb(150, 150, 150);
+  border: rgb(126, 126, 126) 0.1rem solid;
+  margin-top: 180px;
+  position: absolute;
+  top: 55%; /* Ajusté pour centrer verticalement */
+  left: 85%; /* Alignement horizontal */
+  transform: translate(-50%, -50%); /* Correction pour centrer complètement */
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-color-1:hover {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.btn-color-2:hover {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+/* Couleur du Nom-Prénom et de la classe BTS */
 p {
   color: rgb(253, 253, 253);
 }
@@ -76,6 +110,8 @@ p2 {
   position: inherit absolute;
   
 }
+
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -88,12 +124,34 @@ p2 {
 }
 
 .hamburger-icon {
+  width: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
-  width: 30px;
   cursor: pointer;
+  position: absolute; /* Position absolue */
+  top: 72%; /* Alignement vertical au milieu */
+  left: 76%; /* Alignement horizontal au milieu */
+  transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+}
+
+.hamburger-icon2 {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: absolute; /* Position absolue */
+  top: 72%; /* Alignement vertical au milieu */
+  left: 58%; /* Alignement horizontal au milieu */
+  transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
 }
 
 .menu-links a {
@@ -108,33 +166,24 @@ p2 {
 
 .logo {
   font-size: 2rem;
-  color : red;
+  color : rgb(255, 255, 255);
   width: 11%; /* Largeur de votre choix */
 }
 
-.gif-container {
-  width: 1000px; /* Largeur du conteneur */
-  height: 600px; /* Hauteur du conteneur */
-  overflow: hidden; /* Pour cacher les parties du GIF qui dépassent du conteneur */
-  position: absolute; /* Position absolue */
-  top: 45%; /* Alignement vertical au milieu */
-  left: 60%; /* Alignement horizontal au milieu */
-  transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+.logo2 {
+  position: absolute;
+  bottom: 7%;
+  right: 13%; /* Ajustez la position horizontale selon vos besoins */
+  transform: scale(0.4);
 }
-
-.gif-container img {
-  width: 100%; /* Pour remplir entièrement le conteneur */
-  height: auto; /* Pour conserver le ratio d'aspect du GIF */
-}
-
 
 .gif-container2 {
   width: 10%; /* Largeur du conteneur */
   height: 55%; /* Hauteur du conteneur */
   overflow: hidden; /* Pour cacher les parties du GIF qui dépassent du conteneur */
   position: absolute; /* Position absolue */
-  top: 95%; /* Alignement vertical au milieu */
-  left: 60%; /* Alignement horizontal au milieu */
+  top: 92%; /* Alignement vertical au milieu */
+  left: 68%; /* Alignement horizontal au milieu */
   transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
 }
 
@@ -148,7 +197,7 @@ p2 {
   color:white;
   position: absolute;
   bottom: 40%;
-  left: 6%;
+  right: 22%;
   font-size: 40px; /* Taille du texte pour .text-bas-page */
   text-decoration: underline;
 }
@@ -156,10 +205,9 @@ p2 {
 .text-bas-page2 {
   position: absolute;
   bottom: 37%;
-  left: 9%;
+  right: 26%;
   font-size: 25px; /* Taille du texte pour .text-bas-page2 */
 }
-
 
 .profile-image {
   width: 330px; /* Largeur de votre choix */
@@ -167,13 +215,298 @@ p2 {
   border-radius: 50%; /* Pour un effet de cercle */
   position: absolute; /* Position absolue */
   bottom: 45%;
-  left: 7%; /* Positionnement à gauche */
+  right: 24%; /* Positionnement à gauche */
   /* Vous pouvez ajuster la valeur de left selon vos besoins */
   /* Ajoutez d'autres styles de positionnement ici si nécessaire */
 }
 
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.7rem; /* Ajustez la taille de la police selon vos préférences */
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 30px; /* Ajustez selon vos préférences */
+}
+
+
+/* Pour améliorer la lisibilité sur fond sombre */
+.nav-links a {
+  color: white;
+}
+
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* TRANSITION */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+
+
+.section__pic-container {
+  text-align: center; /* Pour centrer l'image horizontalement */
+}
+
+.logo {
+  font-size: 2rem;
+  color : red;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: fixed;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+
+.details-container {
+  max-height 400px;
+  overflow: auto;
+  padding: 10px;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.rubriques-conteneur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: fixed;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>
 <!-- END #CSS-->
+
 
 
   <!-- === Début de la Page d'accueil === -->
@@ -181,7 +514,7 @@ p2 {
 
     <nav id="desktop-nav">
       <div class="logo">Portfolio</div>
-      <div>
+      <div id>
         <ul class="nav-links">
           <li><a href="parcours.html">Parcours</a></li>
           <li><a href="projets.html">Projets</a></li>
@@ -212,9 +545,7 @@ p2 {
       <div class="section__pic-container">
         <img src="./items/imageprofile.jpg" alt="My Profile" class="profile-image" />
       </div>
-      <div class="gif-container">
-        <img src="./items/ob_e1987e_hacker-animation.gif" alt="GIF">
-      </div>
+
       <div class="section__text">
         <h1 class="text-bas-page">TIRYAKI Selahaddin</h1>
         <p class="text-bas-page2">Etudiant en BTS SIO</p>
@@ -223,11 +554,12 @@ p2 {
           <button class="btn btn-color-2" onclick="window.open('./items/CV-TIR.pdf')">CV</button>
         </div>
         <div id="socials-container">
-          <img src="./items/linkedinlogo.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/selahaddin-tiryaki/'" />
+          <img src="./items/linkedinlogo.png" alt="My LinkedIn profile" class="hamburger-icon" onclick="location.href='https://www.linkedin.com/in/selahaddin-tiryaki/'" />
+          
           <div class="gif-container2">
             <img src="./items/gifaccueil.gif" alt="GIF">
           </div>
-          <img src="./items/githublogo.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/SeloTir'" />
+          <img src="./items/githublogo.png" alt="My Github profile" class="hamburger-icon2" onclick="location.href='https://github.com/SeloTir'" />
         </div>
       </div>
     </section>
