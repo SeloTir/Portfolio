@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO - TIRYAKI Selahaddin</title>
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<!--#CSS-->
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("items/pageaccueil.png"); /* Remplacez "items/pageaccueil.png" par le chemin vers votre image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Ajout de propriétés pour s'assurer que l'image couvre entièrement l'arrière-plan */
+  min-height: 100vh; /* Définit la hauteur minimum du corps à 100% de la hauteur de la fenêtre */
+  background-attachment: fixed; /* Empêche l'image de défiler avec le contenu */
+  
+  /* Optionnel : Définir une couleur de fond pour éviter les problèmes de transparence */
+  background-color: #ffffff;
+}
+
+
+/* New Stacking Context with Fixed */
+.side-nav {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+/* To hide the sub-nav */
+.wrapper {
+  background: #333;
+  height: 100vh;
+  width: 75px;
+}
+
+.three-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.dot {
+  flex-shrink: 0;
+  margin: 10px 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+}
+.d1 {background: crimson;}
+.d2 {background: blue;}
+.d3 {background: black;}
+
+.nav-bloc {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f2f21e;
+}
+.nav-bloc:hover {
+  background: rgb(24, 24, 24);
+}
+.nav-bloc:hover .sub-nav {
+  transform: translateX(75px);
+}
+.nav-bloc svg {
+  width: 25px;
+  fill: #f2f2f2;
+  transition:  0.2s ease-in-out ;
+}
+.nav-bloc:hover  svg {
+  fill: #50bddf;
+}
+.sub-nav {
+  padding: 0px;
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  z-index: -1;
+  color: white;
+  /* Hidden at the left side */
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
+}
+.sub-nav h2 {
+  font-family: open sans, sans-serif;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+.sub-nav ul {
+  list-style-type: none;
+}
+.sub-nav li {
+  padding: 15px 20px;
+}
+.sub-nav li:hover {
+  background: rgba(160, 160, 160, 0.555);
+}
+.sub-nav li a {
+   color: #f2f2f2;
+   text-decoration: none;
+}
+
+.sub-nav ul li img {
+    width: 30px; /* Ajustez la largeur selon vos besoins */
+    height: 30px; /* Ajustez la hauteur selon vos besoins */
+    margin-right: 10px; /* Ajoutez une marge à droite pour l'espacement */
+}
+
+
+.sub-nav ul li a {
+    display: flex; /* Utiliser flexbox */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100%; /* Ajuster la hauteur de l'élément */
+}
+
+.sub-nav ul li img {
+    width: 30px; /* Ajuster la taille du logo selon vos besoins */
+    height: 30px; /* Ajuster la taille du logo selon vos besoins */
+}
+
+
+
+body {
+    color: #ffffffbf;
+    font-family: IBM Plex Mono, monospace;
+    padding: 50px;
+}
+
+.typewriter-container {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 30px; /* Ajustez la valeur pour définir la distance par rapport au haut de la page */
+    left: 50%; /* Place le rectangle au milieu horizontalement */
+    transform: translateX(-50%); /* Décale le rectangle de 50% de sa propre largeur vers la gauche pour le centrer */
+    background-color: rgba(0, 0, 0, 0.8); /* Utilisation de rgba pour une couleur plus sombre */
+    padding: 1px 2px; /* Réduire encore l'espacement intérieur */
+    border-radius: 3px; /* Arrondir les coins */
+    color: #fff;
+    z-index: 999; /* Assurez-vous que le texte est au-dessus de tous les autres éléments */
+    font-size: 10px; /* Réduire encore la taille du texte */
+}
+
+.typewriter p {
+    font-size: 45px;
+    font-weight: lighter;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    animation: typing 3.5s steps(24);
+}
+.typewriter p::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background: #dadada;
+    right: 0;
+    top: 0;
+    animation: cursor 1s infinite;
+}
+
+@keyframes typing {
+    from {width:0}
+    to {width: 100%;}
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* JS EFFECT */
+
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #222;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: Open sans;
+    font-weight: 400;
+    font-size: 150px;
+    color: #f1f1f1;
+    display: inline-block;
+    margin-top: 100px;
+    position: relative;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 3px;
+    background: #dadada;
+    right: -15px;
+    top: 0;
+    animation: cursor 1s infinite;
+  }
+  
+  @keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  } */
+
+.main-content {
+  padding-left: 75px;
+  color: #f3f3f3;
+}
+.main-content h1 {
+  font-family: Open Sans, sans-serif;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 40px;
+}
+
+.main-content p {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 30px;
+  line-height: 1.7;
+}
+
+p {
+  margin-top: 10px; /* Adjust the value as needed to position the text below the image */
+  color: white;
+}
+
+.my-paragraph {
+  text-align: center; /* Centers the text */
+  font-weight: bold; /* Makes the text bold */
+  text-decoration: underline; /* Underlines the text */
+  color: white; /* Makes the text white */
+}
+
+
+.image-text-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Optional image styling (adjust as needed) */
+img {
+  width: 200px; /* Adjust width as desired */
+  margin-right: 18px; /* Add margin for spacing */
+  border-radius: 50%;
+}
+
+.liens-reseaux {
+  padding: 20px 0; /* Même marge que les autres blocs */
+  display: flex; /* Pour aligner les éléments horizontalement */
+  justify-content: center; /* Pour centrer les éléments horizontalement */
+  align-items: center; /* Pour centrer les éléments verticalement */
+}
+
+.liens-reseaux a {
+  display: flex; /* Pour aligner les éléments horizontalement */
+  justify-content: center; /* Pour centrer les éléments horizontalement */
+  align-items: center; /* Pour centrer les éléments verticalement */
+  width: 75px; /* Largeur fixe pour correspondre à la largeur des autres blocs */
+  height: 75px; /* Hauteur fixe pour correspondre à la hauteur des autres blocs */
+  margin-bottom: 20px; /* Même espace entre chaque lien */
+}
+
+.liens-reseaux img {
+  width: 50px; /* Ajustez la taille des logos selon vos besoins */
+  height: 50px;
+}
+
+.image-text-container {
+    display: flex;
+    justify-content: flex-end; /* Aligner les éléments à droite */
+    align-items: center;
+}
+
+.image-text-container img {
+    margin-right: 20px; /* Ajouter une marge à droite pour séparer la photo du texte */
+}
+
+.image-text-container .text-content {
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+.image-text-container .text-content h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #dddd;
+}
+
+.image-text-container .text-content h2 {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.presentation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Marge pour séparer du contenu précédent */
+}
+
+.presentation-text {
+    max-width: 600px;
+    text-align: center;
+    margin-left: 20px; /* Marge à gauche pour séparer du texte */
+}
+
+.presentation-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.presentation-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.main-content {
+  padding: 3vw 5vw 5vw;
+}
+h1 {
+  font-family: Playfair Display, serif;
+  font-size: clamp(25px, 7vw, 70px);
+  font-weight: 200;
+}
+h1 + span {
+  font-size: clamp(14px, 2vw, 20px);
+}
+.slideshow-container {
+  margin-top: 4vw;
+  overflow: hidden;
+  min-height: 60vmin;
+  cursor: grab;
+  position: relative;
+}
+.slideshow-container:active {
+  cursor: grabbing;
+}
+.slideshow {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+}
+.slide {
+  flex-shrink: 0;
+  height: 100%;
+  width: 80vmin;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.slide:not(:nth-child(1)){
+  margin-left: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.slide h2, .slide a {
+  text-shadow: 0 0 5px rgba(0,0,0,0.39);
+}
+.slide h2 {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: 300;
+}
+.slide a {
+  position: absolute;
+  bottom: clamp(10px, 2vw, 20px);
+  right: clamp(10px, 2vw, 20px);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 300;
+  color: #fff;
+  pointer-events: auto;
+}
+
+
+.s1 {
+  background-image: url("./items/serveurglpi.png");
+}
+.s2 {
+  background-image: url("./items/imageweb.avif");
+}
+.s3 {
+  background-image: url("./items/serveurzabbix.png");
+}
+.s4 {
+  background-image: url("./items/STORMSHIELD.png");
+}
+.s5 {
+  background-image: url("./items/imageguacamole.jpg");
+}
+
+
+.navigation-bar {
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+  position: relative;
+  padding: 20px 0; /* Adjust padding as needed */
+}
+
+.navigation-bar .road {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px; /* Adjust height as needed */
+  background-color: #fff; /* Road color */
+}
+
+.navigation-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Ensure navigation links are positioned relative to the navigation bar */
+  z-index: 1; /* Ensure navigation links appear above the road */
+}
+
+.navigation-bar ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navigation-bar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.navigation-bar ul li a:hover {
+  background-color: #555;
+}
+
+.typewriter-container {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 30px; /* Ajustez la valeur pour définir la distance par rapport au haut de la page */
+    left: 50%; /* Place le rectangle au milieu horizontalement */
+    transform: translateX(-50%); /* Décale le rectangle de 50% de sa propre largeur vers la gauche pour le centrer */
+    background-color: rgba(0, 0, 0, 0.8); /* Utilisation de rgba pour une couleur plus sombre */
+    padding: 1px 2px; /* Réduire encore l'espacement intérieur */
+    border-radius: 3px; /* Arrondir les coins */
+    color: #fff;
+    z-index: 999; /* Assurez-vous que le texte est au-dessus de tous les autres éléments */
+    font-size: 10px; /* Réduire encore la taille du texte */
+}
+
+.typewriter p {
+    font-size: 45px;
+    font-weight: lighter;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    animation: typing 3.5s steps(24);
+}
+.typewriter p::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background: #dadada;
+    right: 0;
+    top: 0;
+    animation: cursor 1s infinite;
+}
+
+@keyframes typing {
+    from {width:0}
+    to {width: 100%;}
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* JS EFFECT */
+
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #222;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: Open sans;
+    font-weight: 400;
+    font-size: 150px;
+    color: #f1f1f1;
+    display: inline-block;
+    margin-top: 100px;
+    position: relative;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 3px;
+    background: #dadada;
+    right: -15px;
+    top: 0;
+    animation: cursor 1s infinite;
+  }
+  
+  @keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  } */
+
+.main-content {
+  padding-left: 75px;
+  color: #f3f3f3;
+}
+.main-content h1 {
+  font-family: Open Sans, sans-serif;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 40px;
+}
+
+.main-content p {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 30px;
+  line-height: 1.7;
+}
+
+p {
+  margin-top: 10px; /* Adjust the value as needed to position the text below the image */
+  color: white;
+}
+
+.my-paragraph {
+  text-align: center; /* Centers the text */
+  font-weight: bold; /* Makes the text bold */
+  text-decoration: underline; /* Underlines the text */
+  color: white; /* Makes the text white */
+}
+
+
+.image-text-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Optional image styling (adjust as needed) */
+img {
+  width: 200px; /* Adjust width as desired */
+  margin-right: 18px; /* Add margin for spacing */
+  border-radius: 50%;
+}
+
+.liens-reseaux {
+  padding: 20px 0; /* Même marge que les autres blocs */
+  display: flex; /* Pour aligner les éléments horizontalement */
+  justify-content: center; /* Pour centrer les éléments horizontalement */
+  align-items: center; /* Pour centrer les éléments verticalement */
+}
+
+.liens-reseaux a {
+  display: flex; /* Pour aligner les éléments horizontalement */
+  justify-content: center; /* Pour centrer les éléments horizontalement */
+  align-items: center; /* Pour centrer les éléments verticalement */
+  width: 75px; /* Largeur fixe pour correspondre à la largeur des autres blocs */
+  height: 75px; /* Hauteur fixe pour correspondre à la hauteur des autres blocs */
+  margin-bottom: 20px; /* Même espace entre chaque lien */
+}
+
+.liens-reseaux img {
+  width: 50px; /* Ajustez la taille des logos selon vos besoins */
+  height: 50px;
+}
+
+.image-text-container {
+    display: flex;
+    justify-content: flex-end; /* Aligner les éléments à droite */
+    align-items: center;
+}
+
+.image-text-container img {
+    margin-right: 20px; /* Ajouter une marge à droite pour séparer la photo du texte */
+}
+
+.image-text-container .text-content {
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+.image-text-container .text-content h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #dddd;
+}
+
+.image-text-container .text-content h2 {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.presentation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Marge pour séparer du contenu précédent */
+}
+
+.presentation-text {
+    max-width: 600px;
+    text-align: center;
+    margin-left: 20px; /* Marge à gauche pour séparer du texte */
+}
+
+.presentation-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.presentation-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.main-content {
+  padding: 3vw 5vw 5vw;
+}
+h1 {
+  font-family: Playfair Display, serif;
+  font-size: clamp(25px, 7vw, 70px);
+  font-weight: 200;
+}
+h1 + span {
+  font-size: clamp(14px, 2vw, 20px);
+}
+.slideshow-container {
+  margin-top: 4vw;
+  overflow: hidden;
+  min-height: 60vmin;
+  cursor: grab;
+  position: relative;
+}
+.slideshow-container:active {
+  cursor: grabbing;
+}
+.slideshow {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+}
+.slide {
+  flex-shrink: 0;
+  height: 100%;
+  width: 80vmin;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.slide:not(:nth-child(1)){
+  margin-left: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.slide h2, .slide a {
+  text-shadow: 0 0 5px rgba(0,0,0,0.39);
+}
+.slide h2 {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: 300;
+}
+.slide a {
+  position: absolute;
+  bottom: clamp(10px, 2vw, 20px);
+  right: clamp(10px, 2vw, 20px);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 300;
+  color: #fff;
+  pointer-events: auto;
+}
+
+
+.s1 {
+  background-image: url("./items/Lyceecondorcet.png");
+}
+.s2 {
+  background-image: url("./items/LyceeLouisArmand.png");
+}
+
+.image-text-container img {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+}
+
+
+</style>
+
+
+<body>
+
+
+    <div class="typewriter-container">
+        <div class="typewriter">
+            <p>Mes formations</p>
+        </div>
+    </div>
+
+<style>
+    const title = document.querySelector('h1');
+    const txt = "PARIS"
+    
+    function typewriter(word, index){
+        if(index < word.length) {
+            setTimeout(() => {
+                title.innerHTML += `<span>${word[index]}</span>`
+                typewriter(txt, index + 1)
+            }, 300);
+        }
+    }
+    setTimeout(() => {
+        typewriter(txt, 0)
+    }, 500);
+    
+</style>
+
+    <div class="main-content">
+        <div class="slideshow-container">
+          <div class="slideshow">
+            <div class="slide s1">
+              <div class="overlay"></div>
+              <h2>Lycée Condorcet - 93100 Montreuil</h2>
+              <a href="./items/competencescondorcet.pdf" target="_blank"> 
+          <div class="image-text-container">
+            <img src="./items/developpement-de-competence.png" alt="Notions Image">
+            </div>
+            <div class="slide s2">
+              <div class="overlay"></div>
+              <h2>Lycée Louis Armand - 93130 Nogent-Sur-Marne</h2>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+</div>
+
+<script>
+
+const slider = document.querySelector('.slideshow-container')
+let holding = false;
+let firstClickX;
+let alreadyLeftScrolled;
+let velocity;
+let rafID;
+
+slider.addEventListener('mousedown', e => {
+  holding = true;
+
+  firstClickX = e.pageX - slider.offsetLeft;
+
+  alreadyLeftScrolled = slider.scrollLeft;
+  
+  stopTransition()
+})
+
+slider.addEventListener('mousemove', e => {
+  if(!holding) return;
+
+  const x = e.pageX - slider.offsetLeft;
+
+  const scrolled = (x - firstClickX) * 2;
+
+  const prevScrollLeft = slider.scrollLeft
+
+  slider.scrollLeft = alreadyLeftScrolled - scrolled;
+
+  velocity = slider.scrollLeft - prevScrollLeft;
+ 
+})
+
+slider.addEventListener('mouseup', () => {
+  holding = false;
+  startTransition()
+})
+slider.addEventListener('mouseleave', () => {
+  holding = false;
+})
+
+function startTransition(){
+
+  stopTransition();
+
+  rafID = requestAnimationFrame(decreasingTransition);
+}
+
+function stopTransition(){
+  cancelAnimationFrame(rafID)
+}
+function decreasingTransition(){
+
+  slider.scrollLeft += velocity;
+  velocity *= 0.95;
+  if(Math.abs(velocity) > 0.5){
+    rafID = requestAnimationFrame(decreasingTransition)
+    console.log(velocity);
+  }
+
+}
+
+slider.addEventListener('touchstart', e => {
+  holding = true;
+  // pageX => la largeur entre mon click et le DOCUMENT
+  firstClickX = e.targetTouches[0].pageX - slider.offsetLeft;
+
+  alreadyLeftScrolled = slider.scrollLeft;
+  stopTransition()
+})
+slider.addEventListener('touchend', () => {
+  holder = false;
+  startTransition()
+})
+slider.addEventListener('touchmove', e => {
+  if(!holding) return;
+
+  const x = e.targetTouches[0].pageX - slider.offsetLeft;
+
+  const scrolled = (x - firstClickX) * 2;
+
+  const prevScrollLeft = slider.scrollLeft;
+
+  slider.scrollLeft = alreadyLeftScrolled - scrolled;
+
+  velocity = slider.scrollLeft - prevScrollLeft;
+})
+
+
+
+</script>
+
+      <nav class="side-nav">
+        <div class="wrapper">
+            <div class="three-dots-container">
+                <div class="dot d1"></div>
+                <div class="dot d2"></div>
+                <div class="dot d3"></div>
+            </div>
+
+
+            <div class="nav-bloc">
+                <a href="index.html">
+                    <svg viewBox="0 0 50 50">
+                        <image x="0" y="0" width="50" height="50" href="./items/accueil.png" />
+                    </svg>
+                </a>
+            </div>
+    
+            <!-- Rubrique Mon Parcours -->
+            <div class="nav-bloc n-1">
+                <svg viewBox="0 0 50 50">
+                    <image x="0" y="0" width="50" height="50" href="./items/destination.png" />
+                </svg>
+                <div class="sub-nav">
+                    <h2>Mon Parcours</h2>
+                    <ul>
+                        <li>
+                            <a href="formations.html">Formations</a>
+                        </li>
+                        <li>
+                            <a href="stages.html">Stages</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Rubrique Mes Projets -->
+            <div class="nav-bloc n-2">
+                <svg viewBox="0 0 50 50">
+                    <image x="0" y="0" width="50" height="50" href="./items/projet.png" />
+                </svg>
+                <div class="sub-nav">
+                    <h2>Mes Projets</h2>
+                    <ul>
+                        <li>
+                            <a href="projetsenformation.html">Projets formation</a>
+                        </li>
+                        <li>
+                          <a href="Projetsenstage.html">Projets stage</a>
+                        </li>
+                        <li>
+                            <a>E4 - Tableau </a>
+                        </li>
+                        <li>
+                          <a href="certifications.html">Certifications</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Rubrique Veille Technologique -->
+            <div class="nav-bloc n-3">
+                <svg viewBox="0 0 50 50">
+                    <image x="0" y="0" width="50" height="50" href="./items/realite-virtuelle.png" />
+                </svg>
+                <div class="sub-nav">
+                    <h2>Veille Technologique</h2>
+                    <ul>
+                        <li>
+                          <a href="veille-cybersécurité.html">Cybersécurité</a>
+                        </li>
+                        <li>
+                            <a href="veille-cyberattaque.html">Cyberattaque</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Rubrique Projets futurs -->
+            <div class="nav-bloc n-4">
+                <svg viewBox="0 0 50 50">
+                    <image x="0" y="0" width="50" height="50" href="./items/futuriste.png" />
+                </svg>
+                <div class="sub-nav">
+                    <h2>Projets futurs</h2>
+                    <ul>
+                        <li>
+                          <a href="futurs-ecoles.html">Futurs Ecoles</a>
+                        </li>
+                        <li>
+                          <a href="langage-informatique.html">Langages</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+

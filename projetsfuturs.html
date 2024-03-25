@@ -5,150 +5,521 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Parcours</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
- 
- 
- 
- 
- <body>
- 
- <!-- === Début de la page Projets Futurs === -->
 
-  <!-- SECTION PROJETS FUTURS -->
-  <section id="projetsfuturs">
-    <h1 class="title">PROJETS FUTURS</h1>
-    <div class="experience-details-container">
+<!--#CSS-->
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left; /* Optional: center the text */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url('items/pageaccueil.png');
+  background-size: cover;
+  background-position: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* DESKTOP NAV */
+
+/* Pour que la taille de police soit la même sur toutes les pages */
+nav,
+.nav-links {
+  font-size: 2.1rem; /* Ajustez la taille de la police selon vos préférences */
+}
+
+.nav-links {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 30px; /* Ajustez selon vos préférences */
+}
+
+/* Pour améliorer la lisibilité sur fond sombre */
+.nav-links a {
+  color: white;
+}
+
+
+/* Rubriques: Parcours/Projets/etc...*/
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-decoration-color: rgb(124, 124, 124);
+}
+
+a:hover {
+  color: rgb(124, 124, 124);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(124, 124, 124);
+}
+
+/* Tableaux de compétences et CV pour btn */
+.btn-color-1 {
+  background-color: rgb(150, 150, 150);
+  border: rgb(126, 126, 126) 0.1rem solid;
+  margin-top: 180px;
+  position: absolute;
+  top: 55%; /* Ajusté pour centrer verticalement */
+  left: 50%; /* Ajusté pour centrer horizontalement */
+  transform: translate(-50%, -50%); /* Correction pour centrer complètement */
+}
+
+.btn-color-2 {
+  background-color: rgb(150, 150, 150);
+  border: rgb(126, 126, 126) 0.1rem solid;
+  margin-top: 180px;
+  position: absolute;
+  top: 55%; /* Ajusté pour centrer verticalement */
+  left: 85%; /* Alignement horizontal */
+  transform: translate(-50%, -50%); /* Correction pour centrer complètement */
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-color-1:hover {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.btn-color-2:hover {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+
+/* Couleur des paragraphes */
+p {
+  color: rgb(0, 0, 0);
+}
+
+p2 {
+  color: rgb(0, 0, 0);
+  position: inherit absolute;
+  
+}
+
+.details-container {
+  max-height 400px;
+  overflow: auto;
+  padding: 10px;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+
+.details-container {
+  width: 50px; /* Définissez la largeur souhaitée pour les logos */
+  height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement en fonction de la largeur pour éviter la distorsion de l'image */
+}
+
+.unique-image {
+  width: 500px; /* Nouvelle largeur pour l'image spécifique */
+  height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement en fonction de la largeur pour éviter la distorsion de l'image */
+  display: block; /* Assurez-vous que l'image est affichée comme un bloc pour utiliser margin:auto */
+  margin-left: auto; /* Centre l'image horizontalement */
+  margin-right: auto; /* Centre l'image horizontalement */
+}
+
+
+
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: absolute; /* Position absolue */
+  top: 68%; /* Alignement vertical au milieu */
+  left: 78%; /* Alignement horizontal au milieu */
+  transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+}
+
+.hamburger-icon2 {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: absolute; /* Position absolue */
+  top: 67%; /* Alignement vertical au milieu */
+  left: 58%; /* Alignement horizontal au milieu */
+  transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.section__pic-container {
+  text-align: center; /* Pour centrer l'image horizontalement */
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 30%;
+}
+
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.title,
+.title2 {
+  text-align: center;
+}
+
+.title {
+  color: white;
+  text-decoration: underline; /* Pour souligner le texte "Formations" */
+}
+
+.title2 {
+  color: rgb(255, 255, 255);
+}
+
+.compacquise {
+    font-weight: bold; /* Met le titre en gras */
+    font-size: 1.2em; /* Augmente la taille du titre */
+    text-decoration: underline; /* Souligne le titre */
+}
+
+.compacquise2 ul {
+    list-style-type: none; /* Enlève les puces par défaut */
+    padding-left: 0; /* Enlève le retrait par défaut */
+}
+
+.compacquise2 li {
+    margin-left: 0; /* Enlève la marge à gauche pour coller le texte à gauche */
+}
+
+.compacquise2 li::before {
+    content: "•"; /* Utilisation d'un petit point avant chaque compétence */
+    margin-right: 5px; /* Espace entre le point et le texte de la compétence */
+}
+
+.underline {
+    text-decoration: underline; /* Souligner le texte */
+}
+
+
+
+/* Conteneur principal pour l'effet de retournement */
+.flip-container {
+  perspective: 1000px; /* Définit la perspective pour l'effet de retournement */
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+  height: 300px; /* Ajustez la hauteur selon vos besoins */
+  margin-left: 10px; /* Ajoute un décalage de 50px vers la droite */
+  transition: width 0.5s, height 0.5s;
+}
+
+
+
+
+
+/* Conteneur qui effectue l'effet de retournement */
+.flipper {
+  width: 100%;
+  height: 90%;
+  transform-style: preserve-3d; /* Indique que les enfants seront positionnés dans un espace 3D */
+  transition: transform 0.6s; /* Ajoute une transition fluide lors du retournement */
+}
+
+/* Face avant */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Cache la face arrière pendant le retournement */
+}
+
+/* Face arrière */
+.back {
+  transform: rotateY(180deg); /* Fait tourner la face arrière de 180 degrés */
+}
+.back p {
+  color: white;
+  background-color: rgb(0, 0, 0);
+
+}
+
+.flip-container {
+  perspective: 1000px;
+  width: 300px;
+  height: 300px;
+  margin-left: 10px;
+  transition: width 0.5s, height 0.5s;
+  display: inline-block; /* Ajoutez cette propriété pour placer les éléments sur la même ligne */
+}
+
+
+/* Lorsque l'élément est survolé, effectuez le retournement */
+.flip-container:hover .flipper {
+  transform: rotateY(180deg); /* Fait tourner l'élément entier de 180 degrés */
+}
+
+#parcours {
+  text-align: center; /* Centrer le contenu horizontalement */
+}
+
+
+
+
+
+</style>
+
+  <!-- === END #CSS === -->
+
+
+
+
+    <!-- === Début de la Page Parcours === -->
+
+<body>
+  <!-- FORMATIONS -->
+  <nav id="desktop-nav">
+  <div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="parcours.html">Parcours</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="veilletechno.html">Veille Technologique</a></li>
+      <li><a href="certif.html">Certifications</a></li>
+    </ul>
+  </div>
+</nav>
+  <section id="parcours">
+  <h1 class="title">Mes Projets Futurs</h1>
+
+
+  <div class="flip-container">
+    <div class="flipper">
+      <div class="front">
+        <img src="./items/projetfuturs.png" alt="Image avant" width="200" height="200" />
+      </div>
+      <div class="back">
+        <p>Intégrer une école ou une université spécialisée dans le domaine de l'informatique afin de poursuivre mes études jusqu'au niveau Bac +3. Par la suite, je prévois de rejoindre une école d'ingénieurs pour approfondir mes connaissances et acquérir les compétences nécessaires dans le domaine de l'informatique.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+   // Sélectionnez l'élément .image-container (qui n'existe pas dans votre HTML)
+const imageContainer = document.querySelector(".image-container");
+
+// Supprimez l'écouteur d'événements associé
+imageContainer.removeEventListener("click", () => {
+  imageContainer.classList.toggle("hover");
+});
+  </script>
+  
+
+<!-- Ajoutez ceci à l'endroit où vous voulez afficher le nouveau projet -->
+<div class="flip-container centered">
+  <div class="flipper">
+      <div class="front">
+          <img src="./items/learnlangage.jpeg" alt="Image avant" width="200" height="200" />
+      </div>
+      <div class="back">
+          <p>Apprendre les multiples langages de programmation pour réaliser mes projets avec créativité et efficacité.</p>
+      </div>
+  </div>
+</div>
+
+
+
+  <div class="section-container">
+    <div class="about-details-container">
       <div class="about-containers">
         <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>HTML</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>CSS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>SASS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>TypeScript</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Material UI</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
+
+          <img
+            src="./items/search.gif"
+            alt="Education icon"
+            class="details-container"
+          />
+          <h3>Formation</h3>
+          <img src="./items/Lyceecondorcet.png" alt="Education icon" class="unique-image" /> 
+          <p>DORANCO Ecole Supérieure des Technologies Créatives & Organisme de Formation </p>
+          <br>
         </div>
+
+
         <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>PostgreSQL</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Node JS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Express JS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Git</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
+          <img
+            src="./items/search.gif"
+            alt="Education icon"
+            class="details-container"
+          />
+          <h3>Formation</h3>
+          <img src="./items/LyceeLouisArmand.png" alt="Education icon" class="unique-image />
+        </div>
+      </div>
+      <div class="text-container2">
+        <p>2022 - 2024 <br/>Brevet de technicien supérieur - Services informatiques aux organisations (SIO)</p>
+        <br>
+      <div class="compacquise"  
+        <h2>Compétences acquises<h2>
+      </div>
+      <div class="compacquise2">
+          <ul>
+            <ul>
+              <li><span class="underline">HTML/CSS</span> : Concevoir et effectuer des modifications sur le site web concerné de manière précise et esthétique.</li>
+              <br>
+              <li><span class="underline">Serveur GLPI</span> : Gérer et inventorier le parc informatique de manière centralisée et efficace, résoudre les incidents, assister les utilisateurs et maintenir la qualité des services informatiques </li>
+              <br>
+              <li><span class="underline">Serveur Zabbix</span> : Superviser et surveiller une infrastructure, des systèmes et des réseaux à distance de manière proactive et efficace.</li>
+              <br>
+              <li><span class="underline">Stormshield</span> : Administrer et superviser le trafic entrant et sortant de manière efficace et sécurisée. </li>
+              <br>
+              <li><span class="underline">Serveur Guacamole</span> : Facilite l'accès distant aux applications et aux bureaux virtuels de façon sécurisée et efficace.</li>
+              <br>
+              <li><span class="underline">Serveur DNS</span> : Gérer et résoudre les noms de domaine pour faciliter l'accès aux ressources sur Internet de manière transparente et fiable. </li>
+              <br>
+              <li><span class="underline">Attaque par ingénierie sociale</span> : Manipuler et exploiter les interactions humaines pour obtenir des informations sensibles ou et a accéder à des systèmes informatiques de manière frauduleuse à l'aide de l'outil "SET".</li>
+              <br>
+              <li><span class="underline">Mise en place d'une veille technologique</span> : Surveiller et analyser les nouvelles technologies pour rester à jour et prendre de bonnes décisions.</li>
+              <br>
+              <li><span class="underline">VMware et VirtualBox</span> : Pouvoir créer et gérer des machines virtuelles sur un même matériel physique.</li>
+              <br>
+              <li><span class="underline">Injection SQL</span> : Technique malveillante consistant à insérer du code SQL non autorisé dans une requête afin de compromettre ou manipuler une base de données, souvent dans le but d'accéder à des données sensibles ou de corrompre le système.</li>
+          </ul>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        </div>
         </div>
       </div>
     </div>
-    </nav>
-    <p>Copyright &#169; 2024 TIRYAKI Selahaddin. All Rights Reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+  </section>
 </body>
-</html>
-</section>
-
-<!-- === Fin de la page Projets Futurs === -->
