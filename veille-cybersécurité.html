@@ -150,6 +150,110 @@ body {
 }
 
 
+
+body {
+    color: #ffffffbf;
+    font-family: IBM Plex Mono, monospace;
+    padding: 50px;
+}
+
+.typewriter-container {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 30px; /* Ajustez la valeur pour définir la distance par rapport au haut de la page */
+    left: 50%; /* Place le rectangle au milieu horizontalement */
+    transform: translateX(-50%); /* Décale le rectangle de 50% de sa propre largeur vers la gauche pour le centrer */
+    background-color: rgba(0, 0, 0, 0.8); /* Utilisation de rgba pour une couleur plus sombre */
+    padding: 1px 2px; /* Réduire encore l'espacement intérieur */
+    border-radius: 3px; /* Arrondir les coins */
+    color: #fff;
+    z-index: 999; /* Assurez-vous que le texte est au-dessus de tous les autres éléments */
+    font-size: 10px; /* Réduire encore la taille du texte */
+}
+
+.typewriter p {
+    font-size: 45px;
+    font-weight: lighter;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    animation: typing 3.5s steps(24);
+}
+.typewriter p::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background: #dadada;
+    right: 0;
+    top: 0;
+    animation: cursor 1s infinite;
+}
+
+@keyframes typing {
+    from {width:0}
+    to {width: 100%;}
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* JS EFFECT */
+
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #222;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: Open sans;
+    font-weight: 400;
+    font-size: 150px;
+    color: #f1f1f1;
+    display: inline-block;
+    margin-top: 100px;
+    position: relative;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 3px;
+    background: #dadada;
+    right: -15px;
+    top: 0;
+    animation: cursor 1s infinite;
+  }
+  
+  @keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  } */
+
 .main-content {
   padding-left: 75px;
   color: #f3f3f3;
@@ -266,10 +370,255 @@ img {
     color: #333;
 }
 
+.main-content {
+  padding: 3vw 5vw 5vw;
+}
+h1 {
+  font-family: Playfair Display, serif;
+  font-size: clamp(25px, 7vw, 70px);
+  font-weight: 200;
+}
+h1 + span {
+  font-size: clamp(14px, 2vw, 20px);
+}
+.slideshow-container {
+  margin-top: 4vw;
+  overflow: hidden;
+  min-height: 60vmin;
+  cursor: grab;
+  position: relative;
+}
+.slideshow-container:active {
+  cursor: grabbing;
+}
+.slideshow {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+}
+.slide {
+  flex-shrink: 0;
+  height: 100%;
+  width: 80vmin;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.slide:not(:nth-child(1)){
+  margin-left: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.slide h2, .slide a {
+  text-shadow: 0 0 5px rgba(0,0,0,0.39);
+}
+.slide h2 {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: 300;
+}
+.slide a {
+  position: absolute;
+  bottom: clamp(10px, 2vw, 20px);
+  right: clamp(10px, 2vw, 20px);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 300;
+  color: #fff;
+  pointer-events: auto;
+}
+
+
+.s1 {
+  background-image: url("./items/cybersecurite.png");
+}
+.s2 {
+  background-image: url("./items/jo.jpg");
+}
+.s3 {
+  background-image: url("./items/supervision.jpg");
+}
+
+
+.image-text-container img {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+}
+
+
+
+
 </style>
 
 
 <body>
+
+
+    <div class="typewriter-container">
+        <div class="typewriter">
+            <p>La cybersécurité</p>
+        </div>
+    </div>
+
+<style>
+    const title = document.querySelector('h1');
+    const txt = "PARIS"
+    
+    function typewriter(word, index){
+        if(index < word.length) {
+            setTimeout(() => {
+                title.innerHTML += `<span>${word[index]}</span>`
+                typewriter(txt, index + 1)
+            }, 300);
+        }
+    }
+    setTimeout(() => {
+        typewriter(txt, 0)
+    }, 500);
+    
+</style>
+
+
+    <div class="main-content">
+        <div class="slideshow-container">
+          <div class="slideshow">
+
+            <div class="slide s1">
+              <div class="overlay"></div>
+              <a href="https://www.usine-digitale.fr/article/1-des-utilisateurs-sont-responsables-de-88-des-fuites-de-donnees-d-apres-un-rapport.N2210409">Gestion de données et Transformation numérique</a>
+              <a href="./items/VEILLE.pdf" target="_blank"> 
+                <div class="image-text-container">
+                  <img src="./items/notions.png" alt="Notions Image">
+                </div>
+              </a>
+            </div>
+
+            <div class="slide s2">
+              <div class="overlay"></div>
+              <a href="https://www.usine-digitale.fr/article/la-cnil-alerte-sur-la-mesure-de-la-performance-des-sportifs-de-haut-niveau.N2208544">La CNIL alerte sur la protection des données à caractère personnelle</a>
+              <a href="./items/VEILLE.pdf" target="_blank"> 
+                <div class="image-text-container">
+                  <img src="./items/notions.png" alt="Notions Image">
+                </div>
+              </a>
+            </div>
+
+
+            <div class="slide s3">
+              <div class="overlay"></div>
+              <a href="https://www.usine-digitale.fr/article/cybersecurite-pendant-les-jo-nous-allons-deployer-une-offre-de-supervision-24-7-souveraine-annonce-sysdream.N2209836">Déploiement d'une supervision 24/7 pendant les JO</a>
+              <a href="./items/VEILLE.pdf" target="_blank"> 
+                <div class="image-text-container">
+                  <img src="./items/notions.png" alt="Notions Image">
+                </div>
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+<script>
+
+const slider = document.querySelector('.slideshow-container')
+let holding = false;
+let firstClickX;
+let alreadyLeftScrolled;
+let velocity;
+let rafID;
+
+slider.addEventListener('mousedown', e => {
+  holding = true;
+
+  firstClickX = e.pageX - slider.offsetLeft;
+
+  alreadyLeftScrolled = slider.scrollLeft;
+  
+  stopTransition()
+})
+
+slider.addEventListener('mousemove', e => {
+  if(!holding) return;
+
+  const x = e.pageX - slider.offsetLeft;
+
+  const scrolled = (x - firstClickX) * 2;
+
+  const prevScrollLeft = slider.scrollLeft
+
+  slider.scrollLeft = alreadyLeftScrolled - scrolled;
+
+  velocity = slider.scrollLeft - prevScrollLeft;
+ 
+})
+
+slider.addEventListener('mouseup', () => {
+  holding = false;
+  startTransition()
+})
+slider.addEventListener('mouseleave', () => {
+  holding = false;
+})
+
+function startTransition(){
+
+  stopTransition();
+
+  rafID = requestAnimationFrame(decreasingTransition);
+}
+
+function stopTransition(){
+  cancelAnimationFrame(rafID)
+}
+function decreasingTransition(){
+
+  slider.scrollLeft += velocity;
+  velocity *= 0.95;
+  if(Math.abs(velocity) > 0.5){
+    rafID = requestAnimationFrame(decreasingTransition)
+    console.log(velocity);
+  }
+
+}
+
+slider.addEventListener('touchstart', e => {
+  holding = true;
+  // pageX => la largeur entre mon click et le DOCUMENT
+  firstClickX = e.targetTouches[0].pageX - slider.offsetLeft;
+
+  alreadyLeftScrolled = slider.scrollLeft;
+  stopTransition()
+})
+slider.addEventListener('touchend', () => {
+  holder = false;
+  startTransition()
+})
+slider.addEventListener('touchmove', e => {
+  if(!holding) return;
+
+  const x = e.targetTouches[0].pageX - slider.offsetLeft;
+
+  const scrolled = (x - firstClickX) * 2;
+
+  const prevScrollLeft = slider.scrollLeft;
+
+  slider.scrollLeft = alreadyLeftScrolled - scrolled;
+
+  velocity = slider.scrollLeft - prevScrollLeft;
+})
+
+
+
+</script>
 
       <nav class="side-nav">
         <div class="wrapper">
@@ -279,6 +628,7 @@ img {
                 <div class="dot d3"></div>
             </div>
 
+
             <div class="nav-bloc">
                 <a href="index.html">
                     <svg viewBox="0 0 50 50">
@@ -286,10 +636,6 @@ img {
                     </svg>
                 </a>
             </div>
-
-
-
-
     
             <!-- Rubrique Mon Parcours -->
             <div class="nav-bloc n-1">
@@ -324,7 +670,7 @@ img {
                           <a href="Projetsenstage.html">Projets stage</a>
                         </li>
                         <li>
-                            <a>E4 - Tableau </a>
+                            <a href="./items/Tableau-E4.pdf">Tableau - E4</a>
                         </li>
                         <li>
                           <a href="certifications.html">Certifications</a>
@@ -360,7 +706,7 @@ img {
                     <h2>Projets futurs</h2>
                     <ul>
                         <li>
-                          <a href="futurs-ecoles.html">Futurs Ecoles</a>
+                          <a href="futurs-ecoles.html">Futures Ecoles</a>
                         </li>
                         <li>
                           <a href="langage-informatique.html">Langages</a>
@@ -368,3 +714,33 @@ img {
                     </ul>
                 </div>
             </div>
+
+            <!-- Rubrique Liens Réseaux Sociaux -->
+        <div class="nav-bloc">
+          <svg viewBox="0 0 50 50">
+              <image x="0" y="0" width="50" height="50" href="./items/conversation.png" />
+          </svg>
+          <div class="sub-nav">
+              <h2>Réseaux Pro</h2>
+              <ul>
+                  <li>
+                      <a href="https://github.com/SeloTir" target="_blank">
+                          <img src="./items/github.png" alt="Github">
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.linkedin.com/in/selahaddin-tiryaki/" target="_blank">
+                          <img src="./items/linkedin.png" alt="Linkedin">
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="nav-bloc">
+          <a href="./items/CV.pdf">
+              <svg viewBox="0 0 50 50">
+                  <image x="0" y="0" width="50" height="50" href="./items/cv.png" />
+              </svg>
+          </a>
+      </div>
